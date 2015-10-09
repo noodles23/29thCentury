@@ -58,6 +58,7 @@
 {% block content %}
  {% if request.user.is_authenticated %}
 <h1>You are logged in!</h1>
+<a href="/demo_dash/">Access Demo Dashboard Link (need to redirect)</a>
 
 	{% if queryset %}
 	<h2>Welcome Staff</h2>
