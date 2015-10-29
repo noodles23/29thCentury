@@ -57,6 +57,7 @@ INSTALLED_APPS = (
     'crispy_forms',
     'registration',
     'chartkick',
+    'bokeh'
     #my apps
     'newsletter',
     'dashboard',

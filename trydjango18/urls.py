@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^contact/$', 'newsletter.views.contact', name='contact'),
     url(r'^about/$', 'trydjango18.views.about', name='about'),
     url(r'^demo_dash/$', 'dashboard.views.demo_dash', name='demo_dash'),
+
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),

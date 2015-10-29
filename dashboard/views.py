@@ -7,3 +7,5 @@ def demo_dash(request):
 	    return render(request, "demo_dash.html", {})
     else:
 	   return render(request, "home.html", {})
+	   
+	   
