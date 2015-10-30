@@ -43,7 +43,8 @@ def home(request):
 			"queryset": queryset
 		}
 
-	return render(request, "home.html", context)
+	return render(request, "landing.html", context)
+	# return render(request, "landing.html", context)
 
 
 
