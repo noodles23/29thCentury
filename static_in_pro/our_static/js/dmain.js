@@ -86,7 +86,7 @@ console.log(maxDate);
 
 	dateChart
 		//.width(600)
-		.height(220)
+		.height(300)
 		.margins({top: 10, right: 50, bottom: 30, left: 50})
 		.dimension(weekNum)
 		// .group(projectsByDate)
@@ -105,7 +105,7 @@ console.log(maxDate);
 
 	newcustChart
 		//.width(600)
-		.height(220)
+		.height(300)
 		.margins({top: 10, right: 50, bottom: 30, left: 50})
 		.dimension(weekNum)
 		.group(custReturn, 'Returning Customers')
@@ -125,7 +125,7 @@ console.log(maxDate);
 
 	resourceTypeChart
         //.width(300)
-        .height(220)
+        .height(300)
         // .dimension(salesPrice)
         .dimension(prodCategory)
         .group(salespriceByCat)
@@ -138,7 +138,7 @@ console.log(maxDate);
         .group(all);
 
     genderSalesChart
-            .height(220)
+            .height(300)
             //.width(350)
             .radius(90)
             .innerRadius(40)
@@ -159,7 +159,7 @@ console.log(maxDate);
 
     stateCountChart
     	//.width(800)
-        .height(220)
+        .height(300)
         .transitionDuration(1000)
         .dimension(custState)
         .group(salescountByState)
