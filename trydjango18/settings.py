@@ -56,8 +56,7 @@ INSTALLED_APPS = (
     #third party apps
     'crispy_forms',
     'registration',
-    'chartkick',
-    'bokeh'
+    'pymongo',
     #my apps
     'newsletter',
     'dashboard',
