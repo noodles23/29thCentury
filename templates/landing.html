@@ -52,7 +52,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">29th Century</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">29th Century</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -64,17 +64,13 @@
                             <a href="#tf-about" class="page-scroll">About</a>
                         </li>
                         <li>
-                            <a href="#tf-pricing" class="page-scroll">Pricing</a>
-                        </li>
-                        <li>
                             <a href="#tf-services" class="page-scroll">Services</a>
-                        </li>
-
-                        <li>
-                            <a href="#tf-contact" class="page-scroll">Contact</a>
                         </li>
                         <li>
                             <a href="#tf-testimonials" class="page-scroll">Demo</a>
+                        </li>
+                        <li>
+                            <a href="#tf-contact" class="page-scroll">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -187,7 +183,7 @@
             <div class="overlay">
                 <div class="container">
                     <div class="section-title center">
-                        <h2><strong>Our partners’</strong> testimonials</h2>
+                        <h2>All your data in one place, demystified</h2>
                         <div class="line">
                             <hr>
                         </div>
@@ -195,18 +191,8 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <div id="testimonial" class="owl-carousel owl-theme">
-                                <div class="item">
-                                    <h5>This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</h5>
-                                    <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
-                                </div>
-                                <div class="item">
-                                    <h5>This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</h5>
-                                    <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
-                                </div>
-                                <div class="item">
-                                    <h5>This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</h5>
-                                    <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
-                                </div>
+                            <a class="btn btn-lg btn-info" href="{% url 'demo_home' %}" role="button" >Try our Interactive Demo &raquo;</a>
+
                             </div>
                         </div>
                     </div>
@@ -231,17 +217,11 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="control-label">Email address</label>
+                                        <!--<label for="exampleInputEmail1" class="control-label">Email address</label>-->
                                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-</div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-</div>
+ 
                             <button type="submit" class="btn tf-btn btn-default">Submit</button>
                         </form>
                     </div>
@@ -272,7 +252,7 @@
             </div>
         </nav>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' %}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'js/jquery.1.11.1.js' %}"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>

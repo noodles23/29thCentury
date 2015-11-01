@@ -20,7 +20,13 @@
         <link id="base-style-responsive" href= "{% static 'css/style-responsive.css' %}" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
         
-  
+        
+        		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-panels.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+
+			<link rel="stylesheet" href="{% static 'css/dc.css' %}">
+            <link rel="stylesheet" href="{% static 'css/stylenew.css' %}">
             
         <!-- end: CSS -->
         <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -176,11 +182,11 @@
                 <!-- start: Content -->
                 <div id="content" class="span10">
                     <ul class="breadcrumb">
-                        <li>
-                            <i class="icon-home"></i>
-                            <a href="#">Home</a> 
-                            <i class="icon-angle-right"></i>
-                        </li>
+                        <!--<li>-->
+                        <!--    <i class="icon-home"></i>-->
+                        <!--    <a href="#">Home</a> -->
+                        <!--    <i class="icon-angle-right"></i>-->
+                        <!--</li>-->
                         <!--<li>-->
                         <!--    <a href="#">Dashboard</a>-->
                         <!--</li>-->
@@ -189,11 +195,78 @@
 
 							
 				<div class="container">
-WTF
+
+					<div class="row">
+						<div class="2u chart-wrapper" id="menuselect" style="background-color: #33CC99; height: 60px;">
+							<div class="chart-title">  <strong> State Selector </strong> </div>					
+						</div>
+						<div class="2u">
+				<div> <span> &nbsp</span></div>
+						</div>
+						<div class="2u chart-wrapper" id="total-orders">
+							<div class="chart-title">  <strong> Total Orders </strong> </div>					
+						</div>
+
+						<div class="2u chart-wrapper" id="total-sales">
+							<div class="chart-title">  <strong> Total Sales ($) </strong> </div>					
+						</div>
+
+
+					<div class="3u dc-data-count dc-chart" id="row-selection">
+						<span class="filter-count">_</span> selected out of <span class="total-count">_</span> orders |
+						<span>
+							<a href='javascript:dc.filterAll();dc.redrawAll();'><font color="#33CC99">Reset All</font></a>
+						</span>
+					</div>
+							
 
 				</div>
+				</div>
+
+					<div class="container">
+					<div class="row">
+						<div class="6u chart-wrapper"  id="date-chart">
+							<div class="chart-title bold"> <strong> Total Sales ($) </strong></div>
+
+						</div>
+						<div class="3u chart-wrapper" id="resource-chart">
+							<div class="chart-title">  <strong> Total Orders by Category </strong> </div>							
+
+						</div>
+
+						<div class="3u chart-wrapper" id="gender-chart">
+							<div class="chart-title">  <strong> Sales By Customer Gender </strong> </div>		
+						</div>
+							
+
+					</div>
 
 
+
+				</div>	
+				<div class="container">
+				    <div class="row">
+						<div class="3u chart-wrapper" id="csourcePie-chart">
+							<div class="chart-title">  <strong> Sales By Original Customer Source</strong> </div>		
+						</div>
+						<div class="6u chart-wrapper"  id="statecount-chart">
+							<div class="chart-title bold"> <strong> Customers by State</strong></div>
+
+						</div>
+		
+
+
+				</div>
+                </div>
+                
+            <div class="container">
+				    <div class="row">
+				        	<div class="6u chart-wrapper"  id="newcust-chart">
+							<div class="chart-title bold"> <strong> # New vs Returning Customers</strong></div>
+
+						</div>
+						</div>
+						</div>
 
 
                     <!--<div class="row-fluid"> -->
@@ -223,6 +296,11 @@ WTF
         <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
         
+        <script src="{% static 'js/crossfilter.js' %}" type='text/javascript'></script>
+        <script src="{% static 'js/d3.js' %}" type='text/javascript'></script>
+        <script src="{% static 'js/dc.js' %}" type='text/javascript'></script>
+        <script src="{% static 'js/queue.js' %}" type='text/javascript'></script>
+        <script src="{% static 'js/dmain.js' %}" type='text/javascript'></script>
         <!-- end: JavaScript-->
     </body>
 </html>

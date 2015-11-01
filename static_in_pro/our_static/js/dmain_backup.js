@@ -24,6 +24,7 @@ d3.csv('/static/wtf.csv', function makeGraphs(data) {
 	var prodCategory = ndx.dimension(function(d) { return d.prod_category; });
 	var genderStatus = ndx.dimension(function(d) { return d.gender; });
 	var custSource = ndx.dimension(function(d) { return d.customer_source; });
+	var custStatus = ndx.dimension(function(d) { return d.cust_new_or_return; });
 	var custState = ndx.dimension(function(d) { return d.customer_state; });
 
 	var stateGroup = custState.group();
@@ -37,6 +38,10 @@ d3.csv('/static/wtf.csv', function makeGraphs(data) {
 	var netTotalSales = ndx.groupAll().reduceSum(dc.pluck('sales_price'));
 	var netTotalOrders = ndx.groupAll().reduceSum(dc.pluck('sales_count'));
 
+	var custNew=weekNum.group().reduceSum(function(d) 
+   {if (d.cust_new_or_return==='new') {return d.sales_count;}else{return 0;}});
+	var custReturn=weekNum.group().reduceSum(function(d) 
+   {if (d.cust_new_or_return==='return') {return d.sales_count;}else{return 0;}});
 
 
 	//Define threshold values for data
@@ -50,6 +55,7 @@ console.log(maxDate);
     var netOrders = dc.numberDisplay("#total-orders");
 	var netSales = dc.numberDisplay("#total-sales");
 	var dateChart = dc.lineChart("#date-chart");
+	var newcustChart = dc.lineChart("#newcust-chart");
 	var resourceTypeChart = dc.rowChart("#resource-chart");
 	var genderSalesChart = dc.pieChart("#gender-chart");
 	var custSourcePie = dc.pieChart("#csourcePie-chart");
@@ -97,6 +103,25 @@ console.log(maxDate);
 		.ordinalColors(["#56B2EA","#E064CD","#F8B700","#78CC00","#7B71C5"])
 		.yAxis().ticks(6);
 
+	newcustChart
+		//.width(600)
+		.height(300)
+		.margins({top: 10, right: 50, bottom: 30, left: 50})
+		.dimension(weekNum)
+		.group(custReturn, 'Returning Customers')
+		.stack(custNew,'New Customers')
+		.renderArea(true)
+		.transitionDuration(500)
+		.x(d3.time.scale().domain([1, 52]))
+		.elasticY(true)
+		.renderHorizontalGridLines(true)
+    	.renderVerticalGridLines(true)
+		.xAxisLabel("2015 Week Number#")
+		.legend(dc.legend().x(60).y(10).itemHeight(13).gap(5))
+		.elasticX(true)
+        .brushOn(false)
+        .ordinalColors(["#56B2EA","#E064CD","#F8B700","#78CC00","#7B71C5"])
+		.yAxis().ticks(6);	
 
 	resourceTypeChart
         //.width(300)

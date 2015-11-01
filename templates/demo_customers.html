@@ -20,7 +20,13 @@
         <link id="base-style-responsive" href= "{% static 'css/style-responsive.css' %}" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
         
-  
+        
+        		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-panels.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+
+			<link rel="stylesheet" href="{% static 'css/dc.css' %}">
+            <link rel="stylesheet" href="{% static 'css/stylenew.css' %}">
             
         <!-- end: CSS -->
         <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -176,11 +182,11 @@
                 <!-- start: Content -->
                 <div id="content" class="span10">
                     <ul class="breadcrumb">
-                        <li>
-                            <i class="icon-home"></i>
-                            <a href="#">Home</a> 
-                            <i class="icon-angle-right"></i>
-                        </li>
+                        <!--<li>-->
+                        <!--    <i class="icon-home"></i>-->
+                        <!--    <a href="#">Home</a> -->
+                        <!--    <i class="icon-angle-right"></i>-->
+                        <!--</li>-->
                         <!--<li>-->
                         <!--    <a href="#">Dashboard</a>-->
                         <!--</li>-->
@@ -188,12 +194,20 @@
 
 
 							
-				<div class="container">
-WTF
+				<div class="container"  height="600px" >
+                    
+                    Coming Soon
+					
+						</div>
+						
+						            <div class="container">
+				    <div class="row">
+				        	<div class="6u chart-wrapper"  id="newcust-chart">
+							<div class="chart-title bold"> <strong> # New vs Returning Customers</strong></div>
 
-				</div>
-
-
+						</div>
+						</div>
+						</div>
 
 
                     <!--<div class="row-fluid"> -->
@@ -223,6 +237,11 @@ WTF
         <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
         
+        <script src="{% static 'js/crossfilter.js' %}" type='text/javascript'></script>
+        <script src="{% static 'js/d3.js' %}" type='text/javascript'></script>
+        <script src="{% static 'js/dc.js' %}" type='text/javascript'></script>
+        <script src="{% static 'js/queue.js' %}" type='text/javascript'></script>
+        <script src="{% static 'js/dcustomers.js' %}" type='text/javascript'></script>
         <!-- end: JavaScript-->
     </body>
 </html>
