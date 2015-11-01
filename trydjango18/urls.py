@@ -9,8 +9,8 @@ urlpatterns = [
     url(r'^$', 'newsletter.views.home', name='home'),
     url(r'^contact/$', 'newsletter.views.contact', name='contact'),
     url(r'^about/$', 'trydjango18.views.about', name='about'),
-    url(r'^demo_dash/$', 'dashboard.views.demo_dash', name='demo_dash'),
-
+    url(r'^demo_home/$', 'dashboard.views.demo_home', name='demo_home'),
+    url(r'^zzz/$', 'dashboard.views.zzz', name='zzz'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
